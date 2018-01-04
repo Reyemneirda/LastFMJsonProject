@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumDetailVC" customModule="EricProjectLastFM" customModuleProvider="target">
+            <connections>
+                <outlet property="artistTitle" destination="c5X-Bx-6ni" id="wjR-k6-Kb7"/>
+                <outlet property="image" destination="6Hn-GO-UDh" id="O9a-O0-p6y"/>
+                <outlet property="tracksCollection" destination="cpg-cV-TQI" id="Rjh-ar-BzQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMD-b4-bFl">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="c5X-Bx-6ni">
+                            <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LWQ-ay-58H">
+                                <connections>
+                                    <action selector="back" destination="-1" id="yM9-nt-pqQ"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Hn-GO-UDh">
+                    <rect key="frame" x="37" y="64" width="300" height="300"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cpg-cV-TQI">
+                    <rect key="frame" x="0.0" y="372" width="375" height="295"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="295" id="3BR-zY-vGI"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rRh-M1-jUM">
+                        <size key="itemSize" width="375" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="OmK-Gd-58d"/>
+                        <outlet property="delegate" destination="-1" id="eYQ-c0-gj0"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cpg-cV-TQI" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="06i-jP-0Nn"/>
+                <constraint firstItem="6Hn-GO-UDh" firstAttribute="top" secondItem="TMD-b4-bFl" secondAttribute="bottom" id="C1b-Yy-zvy"/>
+                <constraint firstItem="6Hn-GO-UDh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="cIh-pq-L8a"/>
+                <constraint firstItem="TMD-b4-bFl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dVs-Ak-Ekf"/>
+                <constraint firstItem="cpg-cV-TQI" firstAttribute="top" secondItem="6Hn-GO-UDh" secondAttribute="bottom" constant="8" id="fHG-Yp-pcZ"/>
+                <constraint firstItem="cpg-cV-TQI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fTQ-0z-Use"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6Hn-GO-UDh" secondAttribute="trailing" constant="38" id="fWx-JC-4eI"/>
+                <constraint firstItem="cpg-cV-TQI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="knO-6q-0hQ"/>
+                <constraint firstItem="TMD-b4-bFl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mCH-b0-KCc"/>
+                <constraint firstItem="TMD-b4-bFl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="x7J-aD-KoZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="63.5" y="76.5"/>
+        </view>
+    </objects>
+</document>
